@@ -17,10 +17,10 @@ class TweetsController < ApplicationController
    end
  end
 
- get '/tweets/:id' do#{tweet.id}
+ get '/tweets/:id' do
    @tweet = Tweets.find_by_id(params[:id])
    erb :'/tweets/show_tweet'
- end 
+ end
 
  post '/tweets' do
    if params["content"].empty?
