@@ -17,6 +17,11 @@ class TweetsController < ApplicationController
    end
  end
 
+ get '/tweets/:id' do#{tweet.id}
+   @tweet = Tweets.find_by_id(params[:id])
+   erb :'/tweets/show_tweet'
+ end 
+
  post '/tweets' do
    if params["content"].empty?
      redirect to "/tweets/new"
