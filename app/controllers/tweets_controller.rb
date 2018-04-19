@@ -49,7 +49,7 @@ class TweetsController < ApplicationController
   @tweet.update(content: params[:content])
   @tweet.save
   #binding.pry
-  redirect_to "/tweets/#{@tweet.id}"
+  redirect to "/tweets/#{@tweet.id}"
 end
 
  delete '/tweets/:id/delete' do
