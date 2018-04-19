@@ -31,10 +31,10 @@ class UsersController < ApplicationController
     binding.pry
     if @user == nil
       redirect to "/signup"
-    else 
+    else
       session[:user_id] = @user.id
       redirect to "/tweets"
-    end 
+    end
   end
 
   get '/logout' do
