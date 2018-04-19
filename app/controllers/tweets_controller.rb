@@ -62,6 +62,6 @@ end
       redirect to "/tweets"
     else
       redirect to "/tweets/#{@tweet.id}"
-    end 
+    end
  end
 end
