@@ -340,7 +340,7 @@ describe ApplicationController do
         fill_in(:password, :with => "kittens")
         click_button 'submit'
         visit '/tweets/1/edit'
-
+binding.pry
         fill_in(:content, :with => "i love tweeting")
 
         click_button 'submit'
