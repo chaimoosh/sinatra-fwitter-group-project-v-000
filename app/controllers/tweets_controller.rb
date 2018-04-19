@@ -48,7 +48,6 @@ class TweetsController < ApplicationController
   @tweet = Tweet.find_by_id(params[:id])
   @tweet.update(content: params[:content])
   @tweet.save
-  binding.pry
   redirect_to "/tweets/#{@tweet.id}"
 end
 
