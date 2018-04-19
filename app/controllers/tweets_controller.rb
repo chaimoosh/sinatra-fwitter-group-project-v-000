@@ -57,7 +57,11 @@ end
 
  delete '/tweets/:id/delete' do
     @tweet = Tweet.find_by_id(params[:id])
-    @tweet.destroy
-    redirect to "/tweets"
+    if session[:id] == @tweet.user_id
+      @tweet.destroy
+      redirect to "/tweets"
+    else
+      redirect to "/tweets/#{@tweet.id}"
+    end 
  end
 end
